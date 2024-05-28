@@ -1,0 +1,21 @@
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlNjcxMDNiNTBhZjFkMjQ5M2U2MzdkZmNiZWUwOGJkYyIsInN1YiI6IjY2MWZjZWVkN2FlY2M2MDE0OTZiMzkzMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.33DcXoqNPCrhrxFGqv556Nr9EDPiprwF7Blb_zCJHV0
+top rated:
+https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`
+
+upcomming
+https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}
+
+search
+`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(query)}`;
+
+now playing
+https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}
+
+popular movie
+https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}
+
+individual
+https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`;
+
+API KEY
+e67103b50af1d2493e637dfcbee08bdc

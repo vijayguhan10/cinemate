@@ -1,0 +1,89 @@
+.colorforheader {
+  color: white;
+  background-color: black;
+}
+
+.card-body {
+  text-align: start;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.card-title {
+  text-align: start;
+  font-weight: bold;
+  font-size: 25px;
+  border-bottom: 2px solid rgb(17, 16, 16);
+  padding-left: 30px;
+}
+
+.imgtagforMovie {
+  width: 20em;
+}
+
+.card {
+  margin-bottom: 30px;
+}
+
+.btn {
+  width: 100px;
+}
+
+.columdynamic {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1450px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.widthacess {
+  width: 40rem;
+}
+.g-2{
+  width:100px
+
+}
+
+.fs-6 {
+  font-size: 30px;
+}
+
+@media (max-width: 575.98px) {
+  .rowdetailsmovie {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 0;
+  }
+
+  .videosection {
+    width: 100%;
+    height: auto;
+  }
+}
+.rowdetailsmovie {
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 0;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .rowdetailsmovie {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 0;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .rowdetailsmovie {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .columdynamic {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

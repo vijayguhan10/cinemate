@@ -1,0 +1,40 @@
+.columdynamic {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1450px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 576px) {
+  .columdynamic {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .columdynamic {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .columdynamic {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Display three cards per row on extra-large screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .columdynamic {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Display three cards per row on larger extra-large screens */
+  }
+}
