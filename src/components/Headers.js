@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import Toprated from "./Toprated";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import FormControl from "react-bootstrap/FormControl";
+import Button from "react-bootstrap/Button";
 
 const Headers = () => {
   const [query, setQuery] = useState("");
@@ -13,54 +16,46 @@ const Headers = () => {
   };
 
   return (
-    <div className="colorforheader bg-black  bg-opacity-75 ">
-      <nav className="navbar navbar-expand-lg  ">
+    <div className="colorforheader bg-black bg-opacity-75">
+      <Navbar expand="lg" variant="dark">
         <div className="container">
-          <NavLink to="/" className="navbar-brand">
-            <h3 className="cursive text-white ">Cinemate</h3>
-          </NavLink>
-          <button
-            className="navbar-toggler bg-white "
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item" style={{ marginLeft: "1rem" }}>
+          <Navbar.Brand>
+            <NavLink to="/">
+              <h3 className="cursive text-white">Cinemate</h3>
+            </NavLink>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarSupportedContent" />
+          <Navbar.Collapse id="navbarSupportedContent">
+            <Nav className="me-auto mb-2 mb-lg-0">
+              <Nav.Item>
                 <NavLink
-                  className="nav-link text-white "
+                  className="nav-link text-white"
                   activeClassName={isActiveclass}
                   exact
                   to="/"
                 >
                   Home
                 </NavLink>
-              </li>
-              <li className="nav-item" style={{ marginLeft: "1rem" }}>
+              </Nav.Item>
+              <Nav.Item>
                 <NavLink
-                  className="nav-link text-white "
+                  className="nav-link text-white"
                   activeClassName={isActiveclass}
                   to="/popular"
                 >
                   Popular
                 </NavLink>
-              </li>
-              <li className="nav-item" style={{ marginLeft: "1rem" }}>
+              </Nav.Item>
+              <Nav.Item>
                 <NavLink
-                  className="nav-link text-white  "
+                  className="nav-link text-white"
                   activeClassName={isActiveclass}
                   to="/movie/Toprated"
                 >
                   Top Rated
                 </NavLink>
-              </li>
-              <li className="nav-item" style={{ marginLeft: "1rem" }}>
+              </Nav.Item>
+              <Nav.Item>
                 <NavLink
                   className="nav-link text-white"
                   activeClassName={isActiveclass}
@@ -68,24 +63,24 @@ const Headers = () => {
                 >
                   Upcoming
                 </NavLink>
-              </li>
-            </ul>
-            <form className="d-flex" onSubmit={handleSearch}>
-              <input
-                className="form-control me-2"
+              </Nav.Item>
+            </Nav>
+            <Nav className="d-flex">
+              <FormControl
                 type="search"
                 placeholder="Search"
+                className="mr-2"
                 aria-label="Search"
                 onChange={(e) => setQuery(e.target.value)}
               />
-              <button className="btn btn-outline-success v" type="submit">
+              <Button variant="outline-success" onClick={handleSearch}>
                 Search
-              </button>
-            </form>
-          </div>
+              </Button>
+            </Nav>
+          </Navbar.Collapse>
         </div>
-      </nav>
-      <div className="border-bottom "></div>
+      </Navbar>
+      <div className="border-bottom"></div>
     </div>
   );
 };
